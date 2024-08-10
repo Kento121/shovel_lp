@@ -7,6 +7,7 @@
         <title>shovel_creators</title>
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/home_pc.css" />
+        <link rel="icon" href="./image/icon.png">
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const breakpoint = window.matchMedia("(max-width: 599px)");
@@ -35,8 +36,7 @@
     
     <body>
         <div class="body_container">
-            <section id="top">
-                <div class="top_background">
+            <section id="top" class="top">
                     <img src="image/pc/top/top_image.png" alt="トップ画像" loading="lazy"/>
                     <div class="top_ttl">
                         <img src="image/pc/top/top_words.svg" alt="しゃべるまなぶ" loading="lazy"/>
@@ -47,19 +47,19 @@
                     <div class="top_block">
                         <div class="top_contents">
                             <img src="image/pc/top/top1on1.png" alt="マンツーマン" loading="lazy"/>
-                            <p class="contents_word">
+                            <p class="top_contents-word">
                                 マンツーマンで<br />徹底サポート
                             </p>
                         </div>
                         <div class="top_contents">
                             <img src="image/pc/top/topqna.png" alt="いつでも何度でも" loading="lazy" />
-                            <p class="contents_word">
+                            <p class="top_contents-word">
                                 いつでも何度でも<br />質問・相談可
                             </p>
                         </div>
                         <div class="top_contents">
                             <img src="image/pc/top/toppm.png" alt="PM" loading="lazy" />
-                            <p class="contents_word">
+                            <p class="top_contents-word">
                                 PMを見据えた<br />実践的な学習
                             </p>
                         </div>
@@ -69,39 +69,37 @@
                             <img src="image/pc/top/btn2_pc.svg" alt="line相談" loading="lazy"/>
                         </a>
                     </div>
-                </div>
             </section>
             <!-- お悩み -->
-            <section id="concerns">
-                <div class="concerns_background">
-                    <div class="question">
-                        <h2>
+            <section id="concerns" class="concerns">
+                    <div class="concerns_question">
+                        <h2 class="concerns_question-word">
                             転職やスクール選びに迷われている方、<br />こんなお悩みはありませんか？
                         </h2>
                     </div>
                     <div class="concerns_case">
-                        <div class="concern1">
-                            <div class="concern1_bubble">
+                        <div class="concerns_case1">
+                            <div class="concerns_case1-bubble">
                                 <img
                                     src="image/pc/concerns/concern_1/bubble1.svg"
                                     alt="スキルもないから"
                                     loading="lazy"/>
                             </div>
-                            <div class="concern1_human">
+                            <div class="concerns_case1-human">
                                 <img
                                     src="image/pc/concerns/concern_1/human1.png"
                                     alt="男"
                                     loading="lazy"/>
                             </div>
                         </div>
-                        <div class="concern2">
-                            <div class="concern2_bubble">
+                        <div class="concerns_case2">
+                            <div class="concerns_case2-bubble">
                                 <img
                                     src="image/pc/concerns/concern_2/bubble2.svg"
                                     alt="吹き出し"
                                     loading="lazy"/>
                             </div>
-                            <div class="concern2_human">
+                            <div class="concerns_case2-human">
                                 <img
 
                                     src="image/pc/concerns/concern_2/human2.png"
@@ -109,15 +107,15 @@
                                     loading="lazy"/>
                             </div>
                         </div>
-                        <div class="concern3">
-                            <div class="concern3_bubble">
+                        <div class="concerns_case3">
+                            <div class="concerns_case3-bubble">
                                 <img
 
                                     src="image/pc/concerns/concern_3/bubble3.svg"
                                     alt="吹き"
                                     loading="lazy"/>
                             </div>
-                            <div class="concern3_human">
+                            <div class="concerns_case3-human">
                                 <img
 
                                     src="image/pc/concerns/concern_3/human3.png"
@@ -126,7 +124,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
             </section>
             <!-- これさえできれば -->
             <section id="qualities">
@@ -221,6 +218,7 @@
                     </div>
                 </div>
             </section>
+            <!-- 理由 -->
             <section id="reason">
                 <div class="reason_background">
                     <img
