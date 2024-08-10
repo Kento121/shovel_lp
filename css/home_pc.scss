@@ -1,3 +1,11 @@
+// Sassの設定
+$tab: 960px;
+@mixin tab {
+    @media screen and (max-width: $tab) {
+        @content;
+    }
+}
+
 // フォント読み込み
 @font-face {
     font-family: "hakobera_regular";
@@ -25,6 +33,7 @@ $background-position: relative;
 
 body {
     background-color: rgba(137, 195, 235, 0.7);
+    font-size: 62.5%;
 }
 
 .body_container {
@@ -240,7 +249,7 @@ body {
 }
 
 .skill_word {
-    font-size: clamp(16px, 2vw, 21px);
+    font-size: clamp(14px, 2vw, 21px);
     font-family: "hakobera_bold";
     position: absolute;
     bottom: 8%;
@@ -395,7 +404,7 @@ body {
 
 .stu_bubble2 {
     width: 48%;
-    margin-left: 2%;
+    margin-left: 5%;
     position: relative;
 }
 
@@ -419,46 +428,42 @@ body {
 
 .stu_human {
     width: 22%;
-    position: relative;
-    top: 72px;
+    margin-top: 2.2rem;
 }
 
 .blue_box1 {
-    position: absolute;
     width: 90%;
     background-color: #89c3eb;
     padding: 15px 10px;
-    margin: -30px auto;
     border-radius: 10px;
-    left: 0;
-    right: 0;
+    @include tab{
+        width: 100%;
+    }
 }
 
 .blue_box2 {
-    position: absolute;
     width: 90%;
     background-color: #89c3eb;
     padding: 15px 5px;
-    margin: -52px auto;
     border-radius: 10px;
-    left: 0;
-    right: 0;
+    @include tab{
+        width: 100%;
+    }
 }
 
 .blue_box3 {
-    position: absolute;
     width: 95%;
     background-color: #89c3eb;
     padding: 15px 10px;
-    margin: -52px auto;
     border-radius: 10px;
-    left: 0;
-    right: 0;
+    @include tab{
+        width: 100%;
+    }
 }
 
 .white_txt {
     color: white;
-    font-size: clamp(10px, 1vw, 13px);
+    font-size: clamp(8px, 1.2vw, 13px);
     font-family: "hakobera_bold";
     line-height: 1.2;
     letter-spacing: 1.5px;
@@ -466,7 +471,7 @@ body {
 
 .white_txt2 {
     color: white;
-    font-size: clamp(10px, 1vw, 13px);
+    font-size: clamp(8px, 1.2vw, 13px);
     font-family: "hakobera_bold";
     line-height: 1.2;
     letter-spacing: 1.5px;
@@ -505,7 +510,7 @@ body {
 
 .contents_bg {
     position: relative;
-    margin-top: -162px;
+    background-color: #89C3EB;
     z-index: 2;
     img {
         width: 100%;
@@ -657,7 +662,8 @@ body {
     }
     .black_box3 {
         position: relative;
-        padding: 20px 0px;
+        padding: 50% 0px;
+        // padding: 20px 0px;
         border: black solid 1px;
         display: flex;
         flex-direction: column;
@@ -669,7 +675,7 @@ body {
 
     .black_box4 {
         position: relative;
-        padding: 47.3% 0px;
+        padding: 50% 0px;
         border: black solid 1px;
         display: flex;
         flex-direction: column;
@@ -680,6 +686,8 @@ body {
     }
 
     .green_box3 {
+        position: absolute;
+        top: 12%;
         width: 65%;
         aspect-ratio: 3.5/1;
         line-height: 1.5;
@@ -701,25 +709,26 @@ body {
     }
 
     .black_text {
+        position: absolute;
+        top: 42%;
         font-family: "hakobera_bold";
         font-size: clamp(15px, 2.2vw, 24px);
         line-height: 1.5;
-        padding-top: 5%;
-        margin-top: 0px;
-        margin-bottom: 5%;
+
     }
 
     .black_text2 {
+        position: absolute;
+        top: 68%;
         font-family: "hakobera_bold";
         font-size: clamp(15px, 2.2vw, 24px);
         line-height: 1.5;
-        margin-top: 0px;
-        margin-bottom: 20%;
+
     }
     .img_box {
         position: absolute;
         margin: 0 auto;
-        top: 4%;
+        top: 8%;
         img {
             width: 72%;
             vertical-align: bottom;
