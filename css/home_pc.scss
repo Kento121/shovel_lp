@@ -848,6 +848,7 @@ body {
         position: relative;
         padding: 50% 0px;
         // padding: 20px 0px;
+        aspect-ratio: 50 / 1;
         border: black solid 1px;
         display: flex;
         flex-direction: column;
@@ -861,6 +862,7 @@ body {
         position: relative;
         padding: 50% 0px;
         border: black solid 1px;
+        aspect-ratio: 50 / 1;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -896,7 +898,7 @@ body {
         position: absolute;
         top: 42%;
         font-family: "hakobera_bold";
-        font-size: clamp(15px, 2.8vw, 34px);
+        font-size: clamp(15px, 2.4vw, 34px);
         line-height: 1.5;
 
     }
@@ -905,16 +907,18 @@ body {
         position: absolute;
         top: 68%;
         font-family: "hakobera_bold";
-        font-size: clamp(15px, 2.8vw, 34px);
+        font-size: clamp(15px, 2.4vw, 34px);
         line-height: 1.5;
 
     }
     .img_box {
         position: absolute;
-        margin: 0 auto;
-        top: 8%;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         img {
-            width: 72%;
+            width: 80%;
             vertical-align: bottom;
         }
     }
@@ -922,7 +926,7 @@ body {
 
 .contents_line {
     position: absolute;
-    bottom: 12%;
+    bottom: -18%;
     text-align: center;
     width: 100%;
     img {
@@ -932,11 +936,10 @@ body {
 }
 
 .copyright {
-    position: absolute;
-    bottom: 8%;
     text-align: center;
     font-size: clamp(16px, 2vw, 18px);
     color: white;
     font-family: "hakobera_regular";
     width: 100%;
+    padding-bottom: 5rem;
 }
