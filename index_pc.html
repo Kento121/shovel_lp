@@ -24,7 +24,6 @@
                 console.log("リロードされました");
                 if (
                     window.innerWidth > 599
-                    // ||navigator.userAgent.match(/iPhone|Android.+Mobile/)
                 ) {
                     window.location.href = "index_pc.html"; // PC用のページ
                 } else {
@@ -126,8 +125,7 @@
                     </div>
             </section>
             <!-- これさえできれば -->
-            <section id="qualities">
-                <div class="qualities_title">
+            <section id="qualities" class="qualities">
                     <img
                         loading="lazy"
                         src="image/pc/qualities/qualities_ttl.png"
@@ -140,38 +138,37 @@
                             alt=""
                         />
                     </div>
-                    <div class="need_skill">
-                        <div class="skill_contents">
+                    <div class="qualities_need">
+                        <div class="qualities_need-skill">
                             <img
                                 loading="lazy"
                                 src="/image/pc/qualities/comu_card.png"
                                 alt=""
                             />
-                            <p class="skill_word">
+                            <p class="qualities_need-word">
                                 他者との円滑な<br />コミュニケーション
                             </p>
                         </div>
-                        <div class="skill_contents">
+                        <div class="qualities_need-skill">
                             <img
                                 loading="lazy"
                                 src="/image/pc/qualities/create_card.png"
                                 alt=""
                             />
-                            <p class="skill_word">モノづくりを楽しめる</p>
+                            <p class="qualities_need-word">モノづくりを楽しめる</p>
                         </div>
-                        <div class="skill_contents">
+                        <div class="qualities_need-skill">
                             <img
                                 loading="lazy"
                                 src="/image/pc/qualities/lite_card.png"
                                 alt=""
                             />
-                            <p class="skill_word">検索力／リテラシー</p>
+                            <p class="qualities_need-word">検索力／リテラシー</p>
                         </div>
                     </div>
-                </div>
             </section>
-            <!-- サポート -->
-            <section id="support">
+            <!-- サポート PC-->
+            <section id="support" class="support_pc">
                 <div class="support_title">
                     <img
                         loading="lazy"
@@ -218,9 +215,132 @@
                     </div>
                 </div>
             </section>
-            <!-- 理由 -->
-            <section id="reason">
-                <div class="reason_background">
+            <!-- サポートSP -->
+        <section class="supportSP" id="supportSP">
+            <div class="supportSP_top">
+                <p class="supportSP_heading">
+                    <span class="supportSP_heading-large white_with_black_flame"
+                        >SHOVEL ENGINEER</span
+                    ><br /><span class="supportSP_heading-small">では、</span
+                    ><br /><span
+                        class="supportSP_heading-middle white_with_black_flame"
+                        >未経験からのキャリア形成を<br />徹底的にサポートします！</span
+                    >
+                    <img
+                        loading="lazy"
+                        class="supportSP_heading-leftimage"
+                        src="./image/mobile/support/lines_leftside.png"
+                        alt=""
+                    />
+                    <img
+                        loading="lazy"
+                        class="supportSP_heading-rightimage"
+                        src="./image/mobile/support/lines_rightside.png"
+                        alt=""
+                    />
+                </p>
+            </div>
+            <div class="supportSP_contents">
+                <!-- POINT1 -->
+                <div class="supportSP_content">
+                    <div class="supportSP_content-flex">
+                        <img
+                            loading="lazy"
+                            class="supportSP_content-img"
+                            src="./image/mobile/support/support_img1.svg"
+                            alt=""
+                            class="supportSP_content-img"
+                        />
+                        <img
+                            loading="lazy"
+                            class="supportSP_content-bubble"
+                            src="./image/mobile/support/point1_bubble.svg"
+                            alt=""
+                            class="supportSP_content-img"
+                        />
+                    </div>
+                    <p class="supportSP_content-text">
+                        当スクールは、公務員からエンジニアへの転職に特化。代表自身も元公務員からWeb系の開発エンジニアに転職した実績があり、「公務員からの転職だからこそ」活かせるノウハウをお伝えします！
+                    </p>
+                </div>
+                <!-- POINT2 -->
+                <div class="supportSP_content">
+                    <div class="supportSP_content-flex row_reverse">
+                        <img
+                            loading="lazy"
+                            class="supportSP_content-img"
+                            src="./image/mobile/support/support_img2.svg"
+                            alt=""
+                            class="supportSP_content-img"
+                        />
+                        <img
+                            loading="lazy"
+                            class="supportSP_content-bubble"
+                            src="./image/mobile/support/point2_bubble.svg"
+                            alt=""
+                            class="supportSP_content-img"
+                        />
+                    </div>
+                    <p class="supportSP_content-text">
+                        学習サポートとして週に１回３０分のオンライン面談を実施いたします。疑問点の解決はもちろんのこと、転職の不安について講師が寄り添いながら解消いたします！入学から卒業までマンツーマンでレッスンを行います。
+                    </p>
+                </div>
+                <!-- POINT3 -->
+                <div class="supportSP_content">
+                    <div class="supportSP_content-flex">
+                        <img
+                            loading="lazy"
+                            class="supportSP_content-img"
+                            src="./image/mobile/support/support_img1.svg"
+                            alt=""
+                            class="supportSP_content-img"
+                        />
+                        <img
+                            loading="lazy"
+                            class="supportSP_content-bubble"
+                            src="./image/mobile/support/point3_bubble.svg"
+                            alt=""
+                            class="supportSP_content-img"
+                        />
+                    </div>
+                    <p class="supportSP_content-text">
+                        当スクールは現役エンジニアが「今学ぶべき技術」を考え、受講生の皆様１人１人の夢や目標に沿って、必要なプログラミング言語や知識を選定し提供します！
+                    </p>
+                </div>
+                <!-- POINT4 -->
+                <div class="supportSP_content">
+                    <div class="supportSP_content-flex row_reverse">
+                        <img
+                            loading="lazy"
+                            class="supportSP_content-img"
+                            src="./image/mobile/support/support_img2.svg"
+                            alt=""
+                        />
+                        <img
+                            loading="lazy"
+                            class="supportSP_content-bubble"
+                            src="./image/mobile/support/point4_bubble.svg"
+                            alt=""
+                        />
+                    </div>
+                    <p class="supportSP_content-text">
+                        学習中の疑問点がすぐに解決できるよう、チャットでいつでも質問できる環境をご用意しております。学習する上での疑問点を２４時間いつでも質問でき、考え方や解決方法を講師と一緒に考えることで、現場で役立つ即戦力が身に付きます。
+                    </p>
+                </div>
+            </div>
+            <div class="supportSP_button">
+                <a class="_button contact_button" href="https://lin.ee/KYFfJyf">
+                    <!-- 申し込み画像 -->
+                    <img
+                        loading="lazy"
+                        src="./image/mobile/common/btn_sp.svg"
+                        alt=""
+                    />
+                </a>
+            </div>
+        </section>
+            <!-- reason -->
+            <section id="reason" class="reason">
                     <img
                         loading="lazy"
                         src="image/pc/reason/reason_ttl.svg"
@@ -256,10 +376,9 @@
                             />
                         </a>
                     </div>
-                </div>
             </section>
             <!-- 受講生の声 -->
-            <section id="stu">
+            <section id="stu" class="student_pc">
                 <div class="stu_bg">
                     <img loading="lazy" src="image/pc/stu/stu_bg.png" alt="" />
                     <div class="stu">
@@ -332,6 +451,118 @@
                                     alt="どこ"
                                     loading="lazy"/>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 以下tab表示 -->
+            <section id="student" class="student">
+                <div class="student_top">
+                    <img
+                        loading="lazy"
+                        class="student_top-flagsImg"
+                        src="./image/mobile/student/flags.png"
+                        alt=""
+                    />
+                    <p class="student_top-text">
+                        <span class="student_top-white white_with_black_flame"
+                            >SHOVEL ENGINEER</span
+                        ><br /><span class="student_top-large">受講生の声</span>
+                    </p>
+                    <img
+                        loading="lazy"
+                        src="./image/mobile/student/megaphone.svg"
+                        alt=""
+                        class="student_top-megaphone"
+                    />
+                </div>
+                <div class="student_contents">
+                    <div class="student_content">
+                        <!-- flex -->
+                        <div class="student_content-heading">
+                            <div class="student_content-leftside">
+                                <p class="student_content-name">
+                                    受講生：中村 健人さん
+                                </p>
+                                <p class="student_content-nameSmall">
+                                    地方公務員→エンジニアへ転職
+                                </p>
+                            </div>
+                            <div class="student_content-rightside">
+                                <img
+                                    loading="lazy"
+                                    src="./image/mobile/student/stu_1.svg"
+                                    alt=""
+                                    class="student_content-img"
+                                />
+                            </div>
+                        </div>
+                        <div class="student_content-textarea">
+                            <h3 class="student_content-headingText">
+                                学んだこと：HTML/CSS,Ruby, <br />Ruby on Rails
+                            </h3>
+                            <p class="student_content-text">
+                                「公務員からの転職に特化」していることや、「元公務員の方が講師を務めている」ことから、シャベルエンジニアへの入学を決断しました。IT系の知識や強みになるスキルがなく不安を抱えたまま入学しましたが、講師の方が親身に相談に乗ってくださり、モチベーションを保ちながら学べました。また、「週１の面談」や「いつでも質問したら回答が返ってくる」おかげで、勉強の効率が上がることはもちろん、エンジニアとしてのシャベル（喋る）力も身につきました！受講してから8ヶ月で転職でき、充実したエンジニアライフが送れています！公務員からのエンジニア転職に初めは不安だらけでしたが、あの時シャベルエンジニアを選択した自分に感謝です！
+                            </p>
+                        </div>
+                    </div>
+                    <div class="student_content">
+                        <!-- flex -->
+                        <div class="student_content-heading">
+                            <div class="student_content-leftside">
+                                <p class="student_content-name">
+                                    受講生：知念 和也さん
+                                </p>
+                                <p class="student_content-nameSmall">
+                                    消防士→会社員 <br />（副業としてプログラミング）
+                                </p>
+                            </div>
+                            <div class="student_content-rightside">
+                                <img
+                                    loading="lazy"
+                                    src="./image/mobile/student/stu_2.svg"
+                                    alt=""
+                                    class="student_content-img"
+                                />
+                            </div>
+                        </div>
+                        <div class="student_content-textarea">
+                            <h3 class="student_content-headingText">
+                                学んだこと：HTML/CSS/PHP(Laravel)
+                            </h3>
+                            <p class="student_content-text">
+                                プログラミングを独学で勉強しており、挫折しかけているときに出会ったのがシャベルエンジニアでした。ユーモアのある講師がとても親身に教えてくれ、いつでも質問できる環境が整っているので、楽しく学べています。また、シャベルエンジニアでは「しゃべれるエンジニア」というスタンスで取り組んでいるため、プログラミングを学ぶだけでなく対話力も成長できる環境です。レベルにあった実務の流れにも参加させていただけるので、これからもっと学びたいと思わせてくれるスクールです。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="student_content">
+                        <!-- flex -->
+                        <div class="student_content-heading">
+                            <div class="student_content-leftside">
+                                <p class="student_content-name">
+                                    受講生：松本 ちなみさん
+                                </p>
+                                <p class="student_content-nameSmall">
+                                    会社員→デザイナー(フリーランス)
+                                </p>
+                            </div>
+                            <div class="student_content-rightside">
+                                <img
+                                    loading="lazy"
+                                    src="./image/mobile/student/stu_3.svg"
+                                    alt=""
+                                    class="student_content-img"
+                                />
+                            </div>
+                        </div>
+                        <div class="student_content-textarea">
+                            <h3 class="student_content-headingText">
+                                学んだこと：HTML, CSS, Sass,<br />Adobe Photoshop,
+                                Figma
+                            </h3>
+                            <p class="student_content-text">
+                                講師の守備範囲の広さがシャベルエンジニアのすごいところ。プログラミング言語だけでなく、デザインの基本やデザインツールのことまで教わりました。実務では、実際の流れに参加させていただき、座学では学べない実践的な経験を積めるのも魅力です。また、一般的なイメージとして、技術や実績ばかりが重視されがちな業界ですが、「しゃべ（れ）る」ことや「人当たりの良さ」がWeb制作の現場でいかに重宝されるかということも教わりました。さらに、その力をどのように活かせるかということまで学べるのは、シャベルエンジニアだけではないかと思います！
+                            </p>
                         </div>
                     </div>
                 </div>

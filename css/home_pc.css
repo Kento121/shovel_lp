@@ -1,4 +1,26 @@
 @charset "UTF-8";
+img {
+  width: 100%;
+}
+
+p {
+  font-family: "font name", sans-serif;
+}
+
+.relative {
+  position: relative;
+}
+
+.row_reverse {
+  flex-direction: row-reverse;
+}
+
+.white_with_black_flame {
+  color: #fff;
+  -webkit-text-stroke-width: 0.1rem;
+  -webkit-text-stroke-color: #3b3b3b;
+}
+
 @font-face {
   font-family: "hakobera_regular";
   src: url("../font/HakoberaMaruGothicA/HakoberaMaruGothicA/HakoberaMaruGothicA-Regular.ttf") format("truetype");
@@ -21,7 +43,7 @@ body {
 
 .body_container {
   background-color: white;
-  max-width: 1050px;
+  max-width: 1512px;
   min-width: 600px;
   margin: 0 auto;
 }
@@ -59,7 +81,6 @@ body {
 .top_block {
   position: absolute;
   top: 60%;
-  left: 3%;
   width: 100%;
   display: flex;
 }
@@ -73,7 +94,7 @@ body {
   width: 100%;
 }
 .top_contents-word {
-  font-size: clamp(12px, 2.2vw, 21px);
+  font-size: clamp(12px, 2.1vw, 32px);
   font-family: "hakobera_regular";
   position: absolute;
   top: 18%;
@@ -110,7 +131,7 @@ body {
 }
 .concerns_question-word {
   color: white;
-  font-size: clamp(17px, 2.4vw, 26px);
+  font-size: clamp(20px, 2.8vw, 32px);
   font-family: "hakobera_extra_bold";
   -webkit-text-stroke: 0.8px black;
   line-height: 1.5;
@@ -169,14 +190,13 @@ body {
   margin-top: -80%;
 }
 
-.qualities_title {
+.qualities {
   position: relative;
 }
-.qualities_title img {
+.qualities img {
   width: 100%;
   vertical-align: bottom;
 }
-
 .qualities_message {
   position: absolute;
   top: 14%;
@@ -184,27 +204,24 @@ body {
   z-index: 1;
   transform: translate(0, -50%);
 }
-
-.need_skill {
+.qualities_need {
   display: flex;
   position: absolute;
   top: 42%;
   margin-left: 3%;
   margin-right: 3%;
 }
-
-.skill_contents {
+.qualities_need-skill {
   display: flex;
   justify-content: center;
   position: relative;
   margin: 0 10px;
 }
-.skill_contents img {
+.qualities_need-skill img {
   width: 90%;
   vertical-align: bottom;
 }
-
-.skill_word {
+.qualities_need-word {
   font-size: clamp(14px, 2vw, 21px);
   font-family: "hakobera_bold";
   position: absolute;
@@ -215,6 +232,23 @@ body {
   font-weight: bold;
 }
 
+.support_pc {
+  display: block;
+}
+
+.supportSP {
+  display: none;
+}
+
+/* 960px以下の時にモバイル版を表示 */
+@media screen and (max-width: 960px) {
+  .support_pc {
+    display: none;
+  }
+  .supportSP {
+    display: block;
+  }
+}
 .support_title {
   margin-top: -10px;
   position: relative;
@@ -223,7 +257,6 @@ body {
   width: 100%;
   vertical-align: bottom;
 }
-
 .support_bg {
   position: relative;
 }
@@ -231,7 +264,6 @@ body {
   width: 100%;
   vertical-align: bottom;
 }
-
 .support_contents {
   position: absolute;
   top: 0;
@@ -242,7 +274,6 @@ body {
   width: 80%;
   vertical-align: bottom;
 }
-
 .support_btn {
   position: absolute;
   bottom: 3%;
@@ -255,26 +286,89 @@ body {
   vertical-align: bottom;
 }
 
-.reason_background {
+.supportSP {
+  background-image: url("../image/pc/support/bg_white_dot.png");
+}
+.supportSP_top {
+  background-image: url("../image/mobile/support/support_bg.png");
+  text-align: center;
+  padding: 5% 5vw 8%;
+}
+.supportSP_heading {
+  font-family: "hakobera_extra_bold";
   position: relative;
 }
-.reason_background img {
-  width: 100%;
-  vertical-align: bottom;
+.supportSP_heading-large {
+  font-size: 10vw;
 }
-
-.reason_human1 {
+.supportSP_heading-small {
+  color: #fff;
+  font-size: 4vw;
+  line-height: 1.5;
+}
+.supportSP_heading-middle {
+  font-size: 5.5vw;
+}
+.supportSP_heading-leftimage {
   position: absolute;
-  top: 3%;
+  width: 10vw;
+  bottom: -10%;
   left: 0;
-  width: 100%;
-  z-index: 1;
 }
-.reason_human1 img {
-  width: 50%;
-  vertical-align: bottom;
+.supportSP_heading-rightimage {
+  position: absolute;
+  width: 10vw;
+  bottom: -10%;
+}
+.supportSP_contents {
+  background-size: cover;
+  padding: 0 10vw 5%;
+}
+.supportSP_content {
+  background-color: #fff;
+  border: rgba(217, 217, 217, 0.3) solid 0.05rem;
+  position: relative;
+  padding: 0 3vw 3%;
+  margin-top: 8.5rem;
+  font-size: 1.6rem;
+}
+.supportSP_content-flex {
+  display: flex;
+  position: absolute;
+  top: -35%;
+  width: 100%;
+}
+.supportSP_content-img {
+  width: 30%;
+}
+.supportSP_content-text {
+  padding-top: 17%;
+  font-family: "hakobera_regular";
+  letter-spacing: 0.15rem;
+  color: #3b3b3b;
+}
+.supportSP_button {
+  width: 100%;
 }
 
+.contact_button {
+  width: 78%;
+  display: block;
+  margin: 0 auto;
+}
+.contact_button :hover {
+  transition-duration: 0.4s;
+  transform: translateY(4px);
+  opacity: 0.9;
+}
+
+.reason {
+  position: relative;
+}
+.reason img {
+  width: 100%;
+  vertical-align: bottom;
+}
 .reason_human1 {
   position: absolute;
   top: 10%;
@@ -286,7 +380,6 @@ body {
   width: 100%;
   vertical-align: bottom;
 }
-
 .reason_human2 {
   position: absolute;
   top: 10%;
@@ -298,7 +391,6 @@ body {
   width: 100%;
   vertical-align: bottom;
 }
-
 .reason_comparison {
   position: absolute;
   top: 23%;
@@ -309,7 +401,6 @@ body {
   width: 90%;
   vertical-align: bottom;
 }
-
 .reason_btn {
   position: absolute;
   top: 81%;
@@ -322,6 +413,23 @@ body {
   vertical-align: bottom;
 }
 
+.student_pc {
+  display: block;
+}
+
+.student {
+  display: none;
+}
+
+/* 960px以下の時にモバイル版を表示 */
+@media screen and (max-width: 960px) {
+  .student_pc {
+    display: none;
+  }
+  .student {
+    display: block;
+  }
+}
 .stu_bg {
   position: relative;
   margin-top: -5px;
@@ -433,6 +541,91 @@ body {
   letter-spacing: 1.5px;
 }
 
+.student {
+  padding-bottom: 10%;
+}
+.student_top {
+  position: relative;
+  padding-top: 22%;
+}
+.student_top-flagsImg {
+  position: absolute;
+  z-index: 1;
+  top: -56%;
+}
+.student_top-text {
+  font-family: "hakobera_extra_bold";
+  text-align: center;
+  line-height: 1.5;
+}
+.student_top-megaphone {
+  width: 14vw;
+  position: absolute;
+  right: 17vw;
+  bottom: -5%;
+}
+.student_top-large {
+  color: #89c3eb;
+  font-size: 8vw;
+}
+.student_top-white {
+  font-size: 10vw;
+}
+.student_contents {
+  width: 90vw;
+  margin: 3rem auto 0;
+}
+.student_content {
+  margin-bottom: 1rem;
+}
+.student_content-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+}
+.student_content-leftside {
+  background-color: #89c3eb;
+  width: 65%;
+  border-radius: 1rem;
+  padding: 3vw 0;
+}
+.student_content-rightside {
+  width: 30%;
+}
+.student_content-name {
+  color: #fff;
+  font-family: "hakobera_bold";
+  font-size: 4vw;
+  line-height: 1;
+  text-align: center;
+}
+.student_content-nameSmall {
+  color: #fff;
+  text-align: center;
+  font-size: 3.5vw;
+  line-height: 1;
+  padding-top: 0.5rem;
+}
+.student_content-textarea {
+  border: #b7afa5 0.1rem solid;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  padding: 2rem 5vw 1rem;
+  color: #3b3b3b;
+  line-height: 1.8;
+}
+.student_content-headingText {
+  text-align: center;
+  font-size: 3.5vw;
+}
+.student_content-text {
+  font-family: "hakobera_regular";
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 3.5vw;
+}
+
 .inst_bg {
   position: relative;
   width: 100%;
@@ -506,11 +699,12 @@ body {
   display: inline-block;
   color: white;
   background-color: skyblue;
-  padding: 7px 18px;
+  padding: 10px 10%;
   margin-left: 10px;
   margin-bottom: 0px;
   border-radius: 10px 10px 0 0;
   box-shadow: 2px 0px 0px 0px rgba(128, 128, 128, 0.5);
+  font-size: 0.8rem;
 }
 .contents_row1 .black_box1 {
   position: relative;
@@ -575,8 +769,6 @@ body {
   margin-bottom: 0px;
 }
 .contents_row1 .small-text {
-  font-size: 10px;
-  font-family: "hakobera_regular";
   letter-spacing: -3px;
 }
 .contents_row1 .img_box {
@@ -600,11 +792,12 @@ body {
   display: inline-block;
   color: white;
   background-color: skyblue;
-  padding: 7px 18px;
+  padding: 10px 10%;
   margin-left: 10px;
   margin-bottom: 0px;
   border-radius: 10px 10px 0 0;
   box-shadow: 2px 0px 0px 0px rgba(128, 128, 128, 0.5);
+  font-size: 0.8rem;
 }
 .contents_row2 .black_box3 {
   position: relative;
@@ -644,7 +837,7 @@ body {
 }
 .contents_row2 .white_text {
   color: white;
-  font-size: clamp(12px, 1.6vw, 18px);
+  font-size: clamp(12px, 1.6vw, 25px);
   font-family: "hakobera_bold";
   margin-top: 0px;
   margin-bottom: 0px;
@@ -653,14 +846,14 @@ body {
   position: absolute;
   top: 42%;
   font-family: "hakobera_bold";
-  font-size: clamp(15px, 2.2vw, 24px);
+  font-size: clamp(15px, 2.8vw, 34px);
   line-height: 1.5;
 }
 .contents_row2 .black_text2 {
   position: absolute;
   top: 68%;
   font-family: "hakobera_bold";
-  font-size: clamp(15px, 2.2vw, 24px);
+  font-size: clamp(15px, 2.8vw, 34px);
   line-height: 1.5;
 }
 .contents_row2 .img_box {
