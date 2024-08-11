@@ -5,7 +5,27 @@ $tab: 960px;
         @content;
     }
 }
+// 共通
+img {
+    width: 100%;
+}
+p {
+    font-family: "font name", sans-serif;
+}
+.relative {
+    position: relative;
+}
+.row_reverse {
+    flex-direction: row-reverse;
+}
 
+// 共通パターン
+.white_with_black_flame {
+    color: #fff;
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: #3b3b3b;
+}
+$blue: #89c3eb;
 // フォント読み込み
 @font-face {
     font-family: "hakobera_regular";
@@ -38,7 +58,7 @@ body {
 
 .body_container {
     background-color: white;
-    max-width: 1050px;
+    max-width: 1512px;
     min-width: 600px;
     margin: 0 auto;
 }
@@ -78,7 +98,6 @@ body {
     &_block{
         position: absolute;
         top: 60%;
-        left: 3%;
         width: 100%;
         display: flex;
     }
@@ -91,7 +110,7 @@ body {
             width: 100%;
         }
         &-word{
-            font-size: clamp(12px, 2.2vw, 21px);
+            font-size: clamp(12px, 2.1vw, 32px);
             font-family: "hakobera_regular";
             position: absolute;
             top: 18%;
@@ -129,7 +148,7 @@ body {
         background-color: #89c3eb;
         &-word{
             color: white;
-            font-size: clamp(17px, 2.4vw, 26px);
+            font-size: clamp(20px, 2.8vw, 32px);
             font-family: "hakobera_extra_bold";
             -webkit-text-stroke: 0.8px black;
             line-height: 1.5;
@@ -193,164 +212,259 @@ body {
 
 // -----qualities-----
 
-.qualities_title {
+.qualities{
     position: $background-position;
     img {
         width: 100%;
         vertical-align: bottom;
     }
-}
-
-.qualities_message {
-    position: absolute;
-    top: 14%;
-    width: 36%;
-    z-index: 1;
-    transform: translate(0, -50%);
-}
-
-.need_skill {
-    display: flex;
-    position: absolute;
-    top: 42%;
-    margin-left: 3%;
-    margin-right: 3%;
-}
-
-.skill_contents {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    margin: 0 10px;
-    img {
-        width: 90%;
-        vertical-align: bottom;
+    &_message{
+        position: absolute;
+        top: 14%;
+        width: 36%;
+        z-index: 1;
+        transform: translate(0, -50%);
     }
-}
-
-.skill_word {
-    font-size: clamp(14px, 2vw, 21px);
-    font-family: "hakobera_bold";
-    position: absolute;
-    bottom: 8%;
-    text-align: center;
-    color: #89c3eb;
-    line-height: 1.4;
-    font-weight: bold;
+    &_need{
+        display: flex;
+        position: absolute;
+        top: 42%;
+        margin-left: 3%;
+        margin-right: 3%;
+        &-skill{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            margin: 0 10px;
+            img {
+                width: 90%;
+                vertical-align: bottom;
+            }
+        }
+        &-word{
+            font-size: clamp(14px, 2vw, 21px);
+            font-family: "hakobera_bold";
+            position: absolute;
+            bottom: 8%;
+            text-align: center;
+            color: #89c3eb;
+            line-height: 1.4;
+            font-weight: bold;
+        }
+    }
 }
 
 // -----support-----
 
-.support_title {
-    margin-top: -10px;
-    position: relative;
-    img {
-        width: $background-width;
-        vertical-align: bottom;
+.support_pc {
+    display: block;
+}
+
+.supportSP {
+    display: none;
+}
+
+/* 960px以下の時にモバイル版を表示 */
+@media screen and (max-width: 960px) {
+    .support_pc {
+        display: none;
+    }
+    .supportSP {
+        display: block;
     }
 }
 
-.support_bg {
-    position: $background-position;
-    img {
+.support{
+    &_title{
+        margin-top: -10px;
+        position: relative;
+        img {
+            width: $background-width;
+            vertical-align: bottom;
+        }
+    }
+    &_bg{
+        position: $background-position;
+        img {
+            width: 100%;
+            vertical-align: bottom;
+        }
+    }
+    &_contents{
+        position: absolute;
+        top: 0;
+        text-align: center;
+        margin-top: 42px;
+        img {
+            width: 80%;
+            vertical-align: bottom;
+        }
+    }
+    &_btn{
+        position: absolute;
+        bottom: 3%;
+        text-align: center;
         width: 100%;
-        vertical-align: bottom;
+        z-index: 1;
+        img {
+            width: 58%;
+            vertical-align: bottom;
+        }
     }
 }
 
-.support_contents {
-    position: absolute;
-    top: 0;
-    text-align: center;
-    margin-top: 42px;
-    img {
-        width: 80%;
-        vertical-align: bottom;
+.supportSP {
+    background-image: url("../image/pc/support/bg_white_dot.png");
+
+    &_top {
+        background-image: url("../image/mobile/support/support_bg.png");
+        text-align: center;
+        padding: 5% 5vw 8%;
+    }
+    &_heading {
+        font-family: "hakobera_extra_bold";
+        position: relative;
+        &-large {
+            font-size: 10vw;
+        }
+        &-small {
+            color: #fff;
+            font-size: 4vw;
+            line-height: 1.5;
+        }
+        &-middle {
+            font-size: 5.5vw;
+        }
+        &-leftimage {
+            position: absolute;
+            width: 10vw;
+            bottom: -10%;
+            left: 0;
+        }
+        &-rightimage {
+            position: absolute;
+            width: 10vw;
+            bottom: -10%;
+        }
+    }
+    &_contents {
+        // background-image: url("../image/pc/support/bg_white_dot.png");
+        background-size: cover;
+        padding: 0 10vw 5%;
+    }
+    &_content {
+        background-color: #fff;
+        border: rgba(217, 217, 217, 0.3) solid 0.05rem;
+        position: relative;
+        padding: 0 3vw 3%;
+        margin-top: 8.5rem;
+        font-size: 1.6rem;
+        &-flex {
+            display: flex;
+            position: absolute;
+            top: -35%;
+            width: 100%;
+        }
+        &-img {
+            width: 30%;
+        }
+        &-text {
+            padding-top: 17%;
+            font-family: "hakobera_regular";
+            letter-spacing: 0.15rem;
+            color: #3b3b3b;
+        }
+    }
+    &_button{
+        width: 100%;
+    }
+}
+.contact_button {
+    width: 78%;
+    display: block;
+    margin: 0 auto;
+    :hover {
+        transition-duration: 0.4s;
+        transform: translateY(4px);
+        opacity: 0.9;
     }
 }
 
-.support_btn {
-    position: absolute;
-    bottom: 3%;
-    text-align: center;
-    width: 100%;
-    z-index: 1;
-    img {
-        width: 58%;
-        vertical-align: bottom;
-    }
-}
+
 
 // -----reason-----
 
-.reason_background {
+.reason{
     position: $background-position;
     img {
         width: 100%;
         vertical-align: bottom;
     }
-}
-
-.reason_human1 {
-    position: absolute;
-    top: 3%;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-    img {
-        width: 50%;
-        vertical-align: bottom;
+    &_human1{
+        position: absolute;
+        top: 10%;
+        left: 0;
+        width: 30%;
+        z-index: 1;
+        img {
+            width: 100%;
+            vertical-align: bottom;
+        }
     }
-}
-
-.reason_human1 {
-    position: absolute;
-    top: 10%;
-    left: 0;
-    width: 30%;
-    z-index: 1;
-    img {
+    &_human2{
+        position: absolute;
+        top: 10%;
+        right: 0;
+        width: 25%;
+        z-index: 1;
+        img {
+            width: 100%;
+            vertical-align: bottom;
+        }
+    }
+    &_comparison{
+        position: absolute;
+        top: 23%;
+        text-align: center;
         width: 100%;
-        vertical-align: bottom;
+        img {
+            width: 90%;
+            vertical-align: bottom;
+        }
     }
-}
-
-.reason_human2 {
-    position: absolute;
-    top: 10%;
-    right: 0;
-    width: 25%;
-    z-index: 1;
-    img {
+    &_btn{
+        position: absolute;
+        top: 81%;
+        text-align: center;
         width: 100%;
-        vertical-align: bottom;
+        z-index: 1;
+        img {
+            width: 60%;
+            vertical-align: bottom;
+        }
+    }
+}
+// stu
+.student_pc{
+    display: block;
+}
+
+.student {
+    display: none;
+}
+
+/* 960px以下の時にモバイル版を表示 */
+@media screen and (max-width: 960px) {
+    .student_pc {
+        display: none;
+    }
+    .student {
+        display: block;
     }
 }
 
-.reason_comparison {
-    position: absolute;
-    top: 23%;
-    text-align: center;
-    width: 100%;
-    img {
-        width: 90%;
-        vertical-align: bottom;
-    }
-}
 
-.reason_btn {
-    position: absolute;
-    top: 81%;
-    text-align: center;
-    width: 100%;
-    z-index: 1;
-    img {
-        width: 60%;
-        vertical-align: bottom;
-    }
-}
-
-// ----stu----
+// ----stu（PC）----
 
 .stu_bg {
     position: $background-position;
@@ -457,6 +571,94 @@ body {
     letter-spacing: 1.5px;
 }
 
+// ----stu（TAB）----
+.student {
+    padding-bottom: 10%;
+    &_top {
+        position: relative;
+        padding-top: 22%;
+        &-flagsImg {
+            position: absolute;
+            z-index: 1;
+            top: -56%;
+        }
+        &-text {
+            font-family: "hakobera_extra_bold";
+            text-align: center;
+            line-height: 1.5;
+        }
+        &-megaphone {
+            width: 14vw;
+            position: absolute;
+            right: 17vw;
+            bottom: -5%;
+        }
+        &-large{
+            color: $blue;
+            font-size: 8vw;
+        }
+        &-white{
+            font-size: 10vw;
+        }
+    }
+    &_contents {
+        width: 90vw;
+        margin: 3rem auto 0;
+    }
+    &_content {
+        margin-bottom: 1rem;
+        &-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            width: 100%;
+        }
+        &-leftside {
+            background-color: $blue;
+            width: 65%;
+            border-radius: 1rem;
+            padding: 3vw 0;
+        }
+        &-rightside {
+            width: 30%;
+        }
+        &-name {
+            color: #fff;
+            font-family: "hakobera_bold";
+            font-size: 4vw;
+            line-height: 1;
+            text-align: center;
+        }
+        &-nameSmall {
+            color: #fff;
+            text-align: center;
+            font-size: 3.5vw;
+            line-height: 1;
+            padding-top: 0.5rem;
+        }
+        &-textarea {
+            border: #b7afa5 0.1rem solid;
+            border-radius: 1rem;
+            margin-top: 1rem;
+            padding: 2rem 5vw 1rem;
+            color: #3b3b3b;
+            line-height: 1.8;
+        }
+        &-headingText {
+            text-align: center;
+            font-size: 3.5vw;
+        }
+        &-text {
+            font-family: "hakobera_regular";
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            font-size: 3.5vw;
+        }
+    }
+}
+
+
+
 // ----inst----
 
 .inst_bg {
@@ -532,11 +734,12 @@ body {
         display: inline-block;
         color: white;
         background-color: skyblue;
-        padding: 7px 18px;
+        padding: 10px 10%;
         margin-left: 10px;
         margin-bottom: 0px;
         border-radius: 10px 10px 0 0;
         box-shadow: 2px 0px 0px 0px rgba(128, 128, 128, 0.5);
+        font-size: 0.8rem;
     }
     .black_box1 {
         position: relative;
@@ -607,8 +810,8 @@ body {
     }
 
     .small-text {
-        font-size: 10px;
-        font-family: "hakobera_regular";
+        // font-size: 10px;
+        // font-family: "hakobera_regular";
         letter-spacing: -3px;
     }
 
@@ -634,11 +837,12 @@ body {
         display: inline-block;
         color: white;
         background-color: skyblue;
-        padding: 7px 18px;
+        padding: 10px 10%;
         margin-left: 10px;
         margin-bottom: 0px;
         border-radius: 10px 10px 0 0;
         box-shadow: 2px 0px 0px 0px rgba(128, 128, 128, 0.5);
+        font-size: 0.8rem;
     }
     .black_box3 {
         position: relative;
@@ -682,7 +886,7 @@ body {
 
     .white_text {
         color: white;
-        font-size: clamp(12px, 1.6vw, 18px);
+        font-size: clamp(12px, 1.6vw, 25px);
         font-family: "hakobera_bold";
         margin-top: 0px;
         margin-bottom: 0px;
@@ -692,7 +896,7 @@ body {
         position: absolute;
         top: 42%;
         font-family: "hakobera_bold";
-        font-size: clamp(15px, 2.2vw, 24px);
+        font-size: clamp(15px, 2.8vw, 34px);
         line-height: 1.5;
 
     }
@@ -701,7 +905,7 @@ body {
         position: absolute;
         top: 68%;
         font-family: "hakobera_bold";
-        font-size: clamp(15px, 2.2vw, 24px);
+        font-size: clamp(15px, 2.8vw, 34px);
         line-height: 1.5;
 
     }
