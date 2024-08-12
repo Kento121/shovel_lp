@@ -36,9 +36,12 @@ p {
   src: url("../font/HakoberaMaruGothicA/HakoberaMaruGothicA/HakoberaMaruGothicA-ExtraBold.ttf") format("truetype");
   font-display: swap;
 }
+html {
+  font-size: 62.5%;
+}
+
 body {
   background-color: rgba(137, 195, 235, 0.7);
-  font-size: 62.5%;
 }
 
 .body_container {
@@ -299,7 +302,7 @@ body {
   position: relative;
 }
 .supportSP_heading-large {
-  font-size: 10vw;
+  font-size: 8vw;
 }
 .supportSP_heading-small {
   color: #fff;
@@ -307,13 +310,13 @@ body {
   line-height: 1.5;
 }
 .supportSP_heading-middle {
-  font-size: 5.5vw;
+  font-size: 4.5vw;
 }
 .supportSP_heading-leftimage {
   position: absolute;
   width: 10vw;
   bottom: -10%;
-  left: 0;
+  left: 7%;
 }
 .supportSP_heading-rightimage {
   position: absolute;
@@ -336,14 +339,15 @@ body {
   display: flex;
   position: absolute;
   top: -35%;
-  width: 100%;
+  width: 90%;
 }
 .supportSP_content-img {
   width: 30%;
 }
 .supportSP_content-text {
-  padding-top: 17%;
+  padding-top: 18%;
   font-family: "hakobera_regular";
+  font-size: 16px;
   letter-spacing: 0.15rem;
   color: #3b3b3b;
 }
@@ -352,7 +356,7 @@ body {
 }
 
 .contact_button {
-  width: 78%;
+  width: 60%;
   display: block;
   margin: 0 auto;
 }
@@ -546,7 +550,7 @@ body {
 }
 .student_top {
   position: relative;
-  padding-top: 22%;
+  padding-top: 26%;
 }
 .student_top-flagsImg {
   position: absolute;
@@ -566,10 +570,10 @@ body {
 }
 .student_top-large {
   color: #89c3eb;
-  font-size: 8vw;
+  font-size: 6vw;
 }
 .student_top-white {
-  font-size: 10vw;
+  font-size: 8vw;
 }
 .student_contents {
   width: 90vw;
@@ -596,14 +600,14 @@ body {
 .student_content-name {
   color: #fff;
   font-family: "hakobera_bold";
-  font-size: 4vw;
+  font-size: 3vw;
   line-height: 1;
   text-align: center;
 }
 .student_content-nameSmall {
   color: #fff;
   text-align: center;
-  font-size: 3.5vw;
+  font-size: 2.5vw;
   line-height: 1;
   padding-top: 0.5rem;
 }
@@ -617,13 +621,13 @@ body {
 }
 .student_content-headingText {
   text-align: center;
-  font-size: 3.5vw;
+  font-size: 2.5vw;
 }
 .student_content-text {
   font-family: "hakobera_regular";
   padding-top: 2rem;
   padding-bottom: 2rem;
-  font-size: 3.5vw;
+  font-size: 2.5vw;
 }
 
 .inst_bg {
