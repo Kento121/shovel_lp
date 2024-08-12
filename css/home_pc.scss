@@ -51,9 +51,13 @@ $blue: #89c3eb;
 $background-width: 100%;
 $background-position: relative;
 
+html{
+    font-size: 62.5%;
+}
+
 body {
     background-color: rgba(137, 195, 235, 0.7);
-    font-size: 62.5%;
+
 }
 
 .body_container {
@@ -325,7 +329,7 @@ body {
         font-family: "hakobera_extra_bold";
         position: relative;
         &-large {
-            font-size: 10vw;
+            font-size: 8vw;
         }
         &-small {
             color: #fff;
@@ -333,13 +337,13 @@ body {
             line-height: 1.5;
         }
         &-middle {
-            font-size: 5.5vw;
+            font-size: 4.5vw;
         }
         &-leftimage {
             position: absolute;
             width: 10vw;
             bottom: -10%;
-            left: 0;
+            left: 7%;
         }
         &-rightimage {
             position: absolute;
@@ -363,14 +367,15 @@ body {
             display: flex;
             position: absolute;
             top: -35%;
-            width: 100%;
+            width: 90%;
         }
         &-img {
             width: 30%;
         }
         &-text {
-            padding-top: 17%;
+            padding-top: 18%;
             font-family: "hakobera_regular";
+            font-size: 16px;
             letter-spacing: 0.15rem;
             color: #3b3b3b;
         }
@@ -380,7 +385,7 @@ body {
     }
 }
 .contact_button {
-    width: 78%;
+    width: 60%;
     display: block;
     margin: 0 auto;
     :hover {
@@ -576,7 +581,7 @@ body {
     padding-bottom: 10%;
     &_top {
         position: relative;
-        padding-top: 22%;
+        padding-top: 26%;
         &-flagsImg {
             position: absolute;
             z-index: 1;
@@ -595,10 +600,10 @@ body {
         }
         &-large{
             color: $blue;
-            font-size: 8vw;
+            font-size: 6vw;
         }
         &-white{
-            font-size: 10vw;
+            font-size: 8vw;
         }
     }
     &_contents {
@@ -625,14 +630,14 @@ body {
         &-name {
             color: #fff;
             font-family: "hakobera_bold";
-            font-size: 4vw;
+            font-size: 3vw;
             line-height: 1;
             text-align: center;
         }
         &-nameSmall {
             color: #fff;
             text-align: center;
-            font-size: 3.5vw;
+            font-size: 2.5vw;
             line-height: 1;
             padding-top: 0.5rem;
         }
@@ -646,13 +651,13 @@ body {
         }
         &-headingText {
             text-align: center;
-            font-size: 3.5vw;
+            font-size: 2.5vw;
         }
         &-text {
             font-family: "hakobera_regular";
             padding-top: 2rem;
             padding-bottom: 2rem;
-            font-size: 3.5vw;
+            font-size: 2.5vw;
         }
     }
 }
