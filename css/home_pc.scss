@@ -739,12 +739,12 @@ body {
         display: inline-block;
         color: white;
         background-color: skyblue;
-        padding: 10px 10%;
+        padding: 10px 12%;
         margin-left: 10px;
         margin-bottom: 0px;
         border-radius: 10px 10px 0 0;
         box-shadow: 2px 0px 0px 0px rgba(128, 128, 128, 0.5);
-        font-size: 0.8rem;
+        font-size: clamp(12px, 1.4vw, 18px);
     }
     .black_box1 {
         position: relative;
@@ -842,12 +842,12 @@ body {
         display: inline-block;
         color: white;
         background-color: skyblue;
-        padding: 10px 10%;
+        padding: 10px 12%;
         margin-left: 10px;
         margin-bottom: 0px;
         border-radius: 10px 10px 0 0;
         box-shadow: 2px 0px 0px 0px rgba(128, 128, 128, 0.5);
-        font-size: 0.8rem;
+        font-size: clamp(12px, 1.4vw, 18px);
     }
     .black_box3 {
         position: relative;
